@@ -1,0 +1,18 @@
+package com.justifai.coreservice;
+
+import java.util.TimeZone;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CoreServiceApplication {
+
+    static {
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(CoreServiceApplication.class, args);
+    }
+
+}

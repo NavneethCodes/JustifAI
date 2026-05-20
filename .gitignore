@@ -1,16 +1,13 @@
-# Compiled class file
+##################################
+# Existing Java
+##################################
+
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -19,6 +16,58 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+##################################
+# Project-wide folders
+##################################
+
+backend/core-service/target/
+backend/ml-service/venv/
+backend/ml-service/__pycache__/
+
+frontend/justifai-ui/node_modules/
+frontend/justifai-ui/dist/
+
+##################################
+# Docker
+##################################
+
+docker/postgres_data/
+
+##################################
+# Environment / Secrets
+##################################
+
+.env
+.env.*
+!.env.example
+
+application-local.properties
+application-secrets.properties
+
+##################################
+# IDE / Editor
+##################################
+
+.vscode/
+.idea/
+.history/
+*.iml
+*.iws
+*.ipr
+
+##################################
+# OS
+##################################
+
+.DS_Store
+Thumbs.db
+
+##################################
+# Temp
+##################################
+
+*.tmp
+*.bak
