@@ -31,6 +31,14 @@ frontend/justifai-ui/node_modules/
 frontend/justifai-ui/dist/
 
 ##################################
+# Datasets
+##################################
+
+datasets/interim
+datasets/models
+datasets/notebooks/.ipynb_checkpoints
+
+##################################
 # Docker
 ##################################
 
