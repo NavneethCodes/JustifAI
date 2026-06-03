@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from app.core.model_loader import model, scaler, feature_columns
+from app.core import model_loader
 from app.schemas.prediction_request import PredictionRequest
 
 def build_features(request: PredictionRequest) -> pd.DataFrame:
@@ -38,10 +38,10 @@ def build_features(request: PredictionRequest) -> pd.DataFrame:
 def predict_risk(request: PredictionRequest) -> float:
     full_df = build_features(request)
 
-    full_df = full_df[feature_columns]
+    full_df = full_df[model_loader.feature_columns]
 
-    scaled_data = scaler.transform(full_df)
+    scaled_data = model_loader.scaler.transform(full_df)
 
-    probability = model.predict_proba(scaled_data)[0][1]
+    probability = model_loader.model.predict_proba(scaled_data)[0][1]
 
     return float(probability)

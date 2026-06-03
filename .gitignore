@@ -28,6 +28,9 @@ backend/ml-service/venv/
 backend/ml-service/app/__pycache__/
 backend/ml-service/app/api/routes/__pycache__/
 backend/ml-service/models/
+backend/ml-service/app/schemas/__pycache__/
+backend/ml-service/app/core/__pycache__/
+backend/ml-service/app/services/__pycache__/
 
 frontend/justifai-ui/node_modules/
 frontend/justifai-ui/dist/
@@ -67,6 +70,7 @@ application-secrets.properties
 *.iml
 *.iws
 *.ipr
+.postman/
 
 ##################################
 # OS
