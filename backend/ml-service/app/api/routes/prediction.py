@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.schemas.prediction_reponse import PredictionResponse
+from app.schemas.prediction_response import PredictionResponse
 from app.schemas.prediction_request import PredictionRequest
 from app.services.prediction_service import predict_risk
 
