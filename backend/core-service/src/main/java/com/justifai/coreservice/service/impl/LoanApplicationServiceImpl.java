@@ -61,7 +61,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     @Override
     public PredictionResponse callMLService(PredictionRequest request) {
-        return mlServiceClient.getRiskPrediction(request);
+        return mlServiceClient.getRiskPrediction(Objects.requireNonNull(request));
     }
 
     @Override
