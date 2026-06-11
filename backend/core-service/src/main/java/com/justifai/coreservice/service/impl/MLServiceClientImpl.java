@@ -4,14 +4,13 @@ import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import com.justifai.coreservice.dto.PredictionRequest;
 import com.justifai.coreservice.dto.PredictionResponse;
 import com.justifai.coreservice.service.MLServiceClient;
-
-import io.micrometer.common.lang.NonNull;
 
 @Service
 public class MLServiceClientImpl implements MLServiceClient {
