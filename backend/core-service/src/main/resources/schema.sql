@@ -17,3 +17,13 @@ CREATE TABLE IF NOT EXISTS loan_applications (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT prediction_value CHECK (prediction IN (0, 1))
 );
+CREATE TABLE IF NOT EXISTS rule_proposals (
+    id BIGSERIAL PRIMARY KEY,
+    rule_name VARCHAR(100) NOT NULL,
+    suggested_value DOUBLE PRECISION NOT NULL,
+    agent_reasoning TEXT,
+    rule_status VARCHAR(20) DEFAULT 'PENDING' CHECK (
+        rule_status IN ('PENDING', 'APPROVED', 'DISAPPROVED')
+    ),
+    rule_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
